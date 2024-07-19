@@ -1,0 +1,4 @@
+queues:
+  - default
+local:
+  concurency: 1

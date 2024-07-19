@@ -1,0 +1,10 @@
+en:
+  response_errors:
+    not_found:
+      error: Not found
+  dry_validation:
+    errors:
+      point:
+        rules:
+          name:
+            already_exists: Points with this name already exists

@@ -1,0 +1,3 @@
+fetch_points_from_external_job:
+  cron: '0 * * * * *'
+  class: FetchPointsJob

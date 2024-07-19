@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Point1",
+    "latitude": 32.442288,
+    "longitude": 42.828382
+  },
+  {
+    "name": "Point2",
+    "latitude": 32.442288,
+    "longitude": 42.828383
+  },
+  {
+    "name": "Point3",
+    "latitude": 32.442288,
+    "longitude": 42.828382
+  },
+  {
+    "name": "Point4",
+    "latitude": 32.442288,
+    "longitude": 42.823382
+  },
+  {
+    "name": "Point5",
+    "latitude": 32.442288,
+    "longitude": 42.828482
+  },
+  {
+    "name": "Point6",
+    "latitude": 32.442288,
+    "longitude": 42.828372
+  }
+]

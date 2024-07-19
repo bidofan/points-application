@@ -1,0 +1,126 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/points":
+    post:
+      summary: Creates a point
+      tags:
+      - Points
+      parameters: []
+      responses:
+        '200':
+          description: point is created
+          content:
+            application/json:
+              examples:
+                ok:
+                  value:
+                    data:
+                      name: name
+                      latitude: 32.111111
+                      longitude: 42.111111
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                latitude:
+                  type: number
+                  format: double
+                longitude:
+                  type: number
+                  format: double
+              required:
+              - name
+              - latitude
+              - longitude
+    get:
+      summary: Search for points
+      tags:
+      - Points
+      parameters:
+      - name: query
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: list of notes
+  "/api/points/{id}":
+    delete:
+      summary: Deletes a point
+      tags:
+      - Points
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: point id
+        schema:
+          type: integer
+      responses:
+        '204':
+          description: point is deleted
+    get:
+      summary: Shows a point
+      tags:
+      - Points
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: id of point
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: point is retrieved
+    patch:
+      summary: Updates a point
+      tags:
+      - Points
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: id of point
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: note updated
+          content:
+            application/json:
+              examples:
+                ok:
+                  value:
+                    data:
+                      name: Time Square
+                      latitude: 42.328392
+                      longitude: 31.083293
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                latitude:
+                  type: number
+                  format: double
+                longitude:
+                  type: number
+                  format: double
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
