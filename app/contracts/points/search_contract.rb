@@ -1,7 +1,7 @@
 module Points
   class SearchContract < ApplicationContract
     params do
-      optional(:query).maybe(:string)
+      optional(:query).filled(:string)
     end
   end
 end

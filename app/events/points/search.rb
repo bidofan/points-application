@@ -9,7 +9,7 @@ module Points
     end
 
     def contract
-      @contract = SearchContract.new.call(params)
+      @contract = Points::SearchContract.new.call(params)
     end
 
     private
