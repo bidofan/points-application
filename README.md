@@ -63,6 +63,17 @@ bundle exec rails rswag
 ```
 
 ## Docker
+
+Build docker image:
+
 ```
-#TODO
+docker-compose build
 ```
+
+Run docker containers:
+
+```
+docker-compose up
+```
+
+
